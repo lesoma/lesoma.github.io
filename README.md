@@ -1,2 +1,2 @@
 # lesoma.github.io
-This is a self-branding website.
+This is a self-profile website.

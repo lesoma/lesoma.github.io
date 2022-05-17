@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Roboto:wght@300&display=swap');
+
+body {
+    background-color: rgb(49, 49, 49);
+}
+
+.upperpart {
+    background-image: url("/background.jpg");
+    background-size: cover;
+    margin:-8px -8px -8px;
+    font-family: 'Koulen';
+    font-size: 35px;
+    text-align: center;
+}
+
+.upperpart #portrait {
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
+    margin-top: 30px;
+}
+
+h1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.navigationbar {
+    background-color: rgb(49, 49, 49);
+    margin-top: 20px;
+    margin-inline-start: -8px;
+    margin-inline-end: -8px;
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+}
+
+#navbar {
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+.menu {
+    display: inline-block;
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Koulen';
+    color: rgb(230, 230, 230);
+    padding-left: 45px;
+    padding-right: 45px;
+}
+
+a {
+    display: block;
+    text-decoration:none;
+    color: rgb(230, 230, 230);
+}
+
+a:hover {
+    color:rgb(125, 167, 209);
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+}
+
+.head {
+    padding-top: 80px;
+    font-family: 'Koulen';
+    color: rgb(230, 230, 230);
+    font-size: 35px;
+}
+
+#tblcontent {
+    padding: 0px;
+    margin: 30px 0px 0px 0px;
+    text-align: justify;
+    color: rgb(230, 230, 230);
+    font-family: 'Roboto';
+    line-height: 30px;
+}
+
+.social {
+    list-style: none;
+    padding: 0px;
+}
+
+.social li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.text {
+    font-family: 'Roboto';
+    color: rgb(230, 230, 230);
+    padding-right: 40px;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+}
