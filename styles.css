@@ -59,7 +59,7 @@ body {
     position: relative;
 }
 
-.navbar a.active, a:visited {
+.navbar a.active, a:visited, a:link {
     color: black;
 }
 
@@ -292,6 +292,17 @@ img {
 
 .info-body {
     background-color: crimson;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 2s ease-in;
+}
+
+.fade-in.appear {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Projects CSS */
