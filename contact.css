@@ -1,0 +1,19 @@
+.contact {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-possibilities, .contact-by-email form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-possibilities {
+    width: 50%;
+    background-color: #04AA6D;
+}
+
+.contact-by-email {
+    width: 50%;
+    background-color: cadetblue;
+}
