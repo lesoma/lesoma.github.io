@@ -38,31 +38,55 @@ function typeWriter() {
   }, 60)
 }
 
-const faders = document.querySelectorAll
-('.fade-in');
+const faders = document.querySelectorAll('.fade-in-left');
+const faders2 = document.querySelectorAll('.fade-in-right')
+const bouncers = document.querySelectorAll('.bounce-in');
 
 const appearOptions = {
   threshold: 0,
-  rootMargin: "0px 0px -100px 0px"
+  rootMargin: "0px 0px -200px 0px"
 };
 
-const appearOnScroll = new IntersectionObserver
-(function(
-  entries,
-  appearOnScroll
-) {
+const appearOnScroll = new IntersectionObserver(function(entries,appearOnScroll) {
   entries.forEach(entry => {
     if (!entry.isIntersecting) {
       return
-    } else  {
-      entry.target.classList.add('appear');
+    } else {
+      entry.target.classList.add('animation');
       appearOnScroll.unobserve(entry.target);
     }
   });
-},
-appearOptions);
+}, appearOptions);
 
 faders.forEach(fader => {
   appearOnScroll.observe(fader);
-})
+});
 
+faders2.forEach(fader => {
+  appearOnScroll.observe(fader);
+});
+
+bouncers.forEach(bouncer => {
+  appearOnScroll.observe(bouncer);
+});
+
+// var btn = document.querySelectorAll(".project-card");
+// var modal = document.querySelectorAll('.modal');
+
+var btn = document.querySelectorAll(".project-card");
+
+for (var i = 0; i < btn.length; i++) {
+  btn[i].addEventListener("click", function() {
+    var modal = document.getElementById(this.dataset.modal);
+    modal.style.display = "block";
+}, false);
+}
+var modals = document.querySelectorAll('.modal');
+
+window.onclick = function(event) {
+  if (event.target.classList.contains('modal')) {
+   for (var index in modals) {
+    if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+   }
+  }
+}
