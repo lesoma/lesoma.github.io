@@ -87,9 +87,22 @@ h1 {
         align-items: center;
     }
 
+    .info-card {
+        width: 100%;
+    }
+
     .fade-in-right {
         align-self: center;
         justify-self: center;
         flex-direction: row;
     }
+
+    .fade-in-left.animation {
+        all: unset;
+    }
+
+    .fade-in-right.animation {
+        all: unset;
+    }
+
 }
