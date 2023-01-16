@@ -17,19 +17,16 @@
 
 <body>
 
-    <nav class="navbar" id="navbar-responsive">
-        <div class="home-and-icon">
-            <a id="home" href="index.html" class="active">lesoma</a>
-            <!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a> -->
+    <nav class="navbar">
+        <div class="home-and-hamburger-container">
+            <a id="home" href="index.html">lesoma</a>
             <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
             </div>
         </div>
-        <div class="links">
+        <div class="link-container">
             <a href="index.html#aboutMe">About me</a>
             <a href="index.html#projects">Projects</a>
             <a href="index.html#contact">Contact</a>
@@ -39,12 +36,12 @@
     <header class="header-container">
         <div class="flex-item-left">
             <p id="greeting">Hi there!</p>
-            <p id="name"></p>
+            <p id="name">I</p>
             <p id="position">(wannabe) Full Stack developer</p>
         </div>
         <div class="flex-item-right">
-            <div class="background"></div>
-            <img src="me.png" alt="it is me">
+            <div id="background"></div>
+            <img src="me.png" alt="It is me">
         </div>
     </header>
 
@@ -52,7 +49,7 @@
         <a href="index.html#aboutMe"><img src="down-arrow.png" alt=""></a>
     </div>
 
-    <h1 class="subtitle" id="aboutMe">About me</h1>
+    <!-- <p class="subtitle" id="aboutMe">About me</p>
     <section class="about-me">
         <div class="info-card fade-in-left">
             <div class="info-header">
@@ -96,47 +93,15 @@
                     pie biscuit.</p>
             </div>
         </div>
-    </section>
-
-    <!-- <h1 id="projects">Projects</h1>
-    <section class="projects">
-        <div class="selection-buttons">
-            <a href="">Wanderer</a>
-            <a href="">P2P Chat</a>
-            <a href="">Box Automat</a>
-        </div>
-        <div class="selected-project">
-            <div class="project-picture">
-                <img src="wanderer.png" alt="wanderer">
-            </div>
-            <div class="project-description">
-                <p id="description">My first object-orineted program, where you are in a maze with a hero character and
-                    you can figth with your enemies. The game logis is pretty basic, the focus was ot to implement the
-                    OOP 4 paradigmas.</p>
-                <img src="code.png" alt="code">
-            </div>
-        </div>
     </section> -->
 
-    <h1 id="projects">Projects</h1>
+    <!-- <p id="projects">Projects</p>
     <section class="projects">
         <a data-modal="modal1" id="first-card" class="project-card bounce-in">
             <div class="image-container">
                 <img src="wanderer.png" alt="">
                 <p class="image-description">Wanderer</p>
             </div>
-            <!-- <div class="card-header">
-                <div class="image-container">
-                    <img src="wanderer.png" alt="" />
-                </div>
-                <div class="card-body">
-                    <p id="card-title">Wanderer</p>
-                    <p>
-                        Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue
-                        bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
-                    </p>
-                </div>
-            </div> -->
         </a>
         <div id="modal1" class="modal">
             <div class="modal-content">
@@ -177,9 +142,9 @@
                 </p>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <!-- <h1 id="contact">Contact me</h1>
+    <!-- <p id="contact">Contact me</p>
     <section class="contact">
         <div class="contact-possibilities">
             <p>Via email</p>
