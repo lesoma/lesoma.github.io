@@ -17,3 +17,10 @@
         margin-bottom: 20%;
     }
 }
+
+@media (max-width: 375px) {
+    .separator {
+        margin-top: 40%;
+        margin-bottom: 40%;
+    }
+}
