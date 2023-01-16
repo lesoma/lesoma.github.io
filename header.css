@@ -86,3 +86,14 @@
         margin-bottom: 10%;
     }
 }
+
+@media (max-width: 450px) {
+    #greeting, #name {
+        font-size: 3vh;
+    }
+
+    #position {
+        font-size: 1vh;
+        margin-bottom: 10%;
+    }
+}
