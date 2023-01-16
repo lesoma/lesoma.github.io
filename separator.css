@@ -12,12 +12,12 @@
 
 @media (max-width: 375px) {
     .separator {
-        margin: 20% 0 20% 0;
+        margin: 10% 0 10% 0;
     }
 }
 
 @media (max-width: 414px) {
     .separator {
-        margin: 30% 0 30% 0;
+        margin: 20% 0 20% 0;
     }
 }
