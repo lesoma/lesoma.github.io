@@ -1,16 +1,19 @@
 .header-container {
-    position: relative;
     display: flex;
     flex-direction: row;
 }
 
 .flex-item-left {
-    /* padding-left: 5%; */
     width: 40%;
 }
 
-#greeting, #name {
-    font-size: 6vh;
+.flex-item-left p {
+    font-size: 20px;
+}
+
+#name {
+    color: white;
+    margin-bottom: 5%;
 }
 
 #greeting {
@@ -20,42 +23,38 @@
 #position {
     opacity: 0;
     transform: translateY(3rem);
-    animation: fadeIn 2s ease 3.5s forwards;
+    animation: fade-in 2s ease 3.5s forwards;
 }
 
-@keyframes fadeIn {
+#greeting, #name {
+    font-size: 6vh;
+}
+
+@keyframes fade-in {
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-#name {
-    margin-bottom: 5%;
-}
-
-.flex-item-left p {
-    font-size: 20px;
-}
-
 .flex-item-right {
-    width: 60%;
-    position: relative;
     display: flex;
     justify-content: flex-end;
+    position: relative;
+    width: 60%;
     margin-top: 5%;
 }
 
-.background {
-    position: absolute;
+#background {
     align-self: flex-end;
+    position: absolute;
     width: 70%;
     height: 90%;
     background-color: darkcyan;
     border-radius: 50% 0% 0% 0%;
 }
 
-.header-container img {
+.flex-item-right img {
     position: relative;
     max-width: 100%;
 }
