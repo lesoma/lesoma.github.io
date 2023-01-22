@@ -30,12 +30,17 @@
 
 @media (max-width: 900px) {
 
-    /* .marquee {
+    .marquee {
         --gap: 4rem;
         gap: var(--gap);
+    }
+
+    .marquee-content {
+        display: flex;
+        justify-content: space-around;
     }
     
     .marquee-content img {
         height: 3rem;
-    } */
+    }
 }
