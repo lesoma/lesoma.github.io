@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="separator.css">
     <link rel="stylesheet" href="about-me.css">
     <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="skills.css">
     <link rel="stylesheet" href="contact.css">
     <title>Soma Leisztner</title>
 </head>
@@ -19,7 +20,7 @@
 
     <nav class="navbar">
         <div class="home-and-hamburger-container">
-            <a id="home" href="index.html">lesoma</a>
+            <a id="home" href="index.html">&#60; / lesoma &#62;</a>
             <div class="hamburger">
                 <span class="hamburger-bar"></span>
                 <span class="hamburger-bar"></span>
@@ -49,15 +50,19 @@
         <a href="index.html#aboutMe"><img src="down-arrow.png" alt=""></a>
     </div>
 
-    <!-- <p class="subtitle" id="aboutMe">About me</p>
+    <div id="aboutMe" class="subtitle">
+        <span>A</span><span>b</span><span>o</span><span>u</span><span>t</span>
+        <span>m</span><span>e</span>
+    </div>
+
     <section class="about-me">
         <div class="info-card fade-in-left">
             <div class="info-header">
-                <img src="introduction.jpg" alt="">
+                <img src="introduction.png" alt="">
             </div>
             <div class="info-body">
                 <p class="card-title">Introduction</p>
-                <p>Chocolate croissant halvah tart dragée gummies. Cotton candy donut sweet roll jelly beans
+                <p class="card-content">Chocolate croissant halvah tart dragée gummies. Cotton candy donut sweet roll jelly beans
                     marshmallow macaroon. Gummies cake tootsie roll pastry cotton candy bonbon. Wafer apple pie halvah
                     pie biscuit. Chocolate croissant halvah tart dragée gummies. Cotton candy donut sweet roll jelly
                     beans
@@ -67,11 +72,11 @@
         </div>
         <div class="info-card fade-in-right">
             <div class="info-header">
-                <img src="education.jpg" alt="">
+                <img src="education.png" alt="">
             </div>
             <div class="info-body">
                 <p class="card-title">Education</p>
-                <p>Chocolate croissant halvah tart dragée gummies. Cotton candy donut sweet roll jelly beans
+                <p class="card-content">Chocolate croissant halvah tart dragée gummies. Cotton candy donut sweet roll jelly beans
                     marshmallow macaroon. Gummies cake tootsie roll pastry cotton candy bonbon. Wafer apple pie halvah
                     pie biscuit. Chocolate croissant halvah tart dragée gummies. Cotton candy donut sweet roll jelly
                     beans
@@ -81,11 +86,11 @@
         </div>
         <div class="info-card fade-in-left">
             <div class="info-header">
-                <img src="hobbies.jpg" alt="">
+                <img src="hobbies.png" alt="">
             </div>
             <div class="info-body">
                 <p class="card-title">Hobbies</p>
-                <p>Chocolate croissant halvah tart dragée gummies. Cotton candy donut sweet roll jelly beans
+                <p class="card-content">Chocolate croissant halvah tart dragée gummies. Cotton candy donut sweet roll jelly beans
                     marshmallow macaroon. Gummies cake tootsie roll pastry cotton candy bonbon. Wafer apple pie halvah
                     pie biscuit. Chocolate croissant halvah tart dragée gummies. Cotton candy donut sweet roll jelly
                     beans
@@ -93,13 +98,16 @@
                     pie biscuit.</p>
             </div>
         </div>
-    </section> -->
+    </section>
 
-    <!-- <p id="projects">Projects</p>
+    <div id="projects" class="subtitle">
+        <span>P</span><span>r</span><span>o</span><span>j</span><span>e</span><span>c</span><span>t</span><span>s</span>
+    </div>
+
     <section class="projects">
         <a data-modal="modal1" id="first-card" class="project-card bounce-in">
             <div class="image-container">
-                <img src="wanderer.png" alt="">
+                <img src="wanderer-icon.png" alt="">
                 <p class="image-description">Wanderer</p>
             </div>
         </a>
@@ -107,14 +115,14 @@
             <div class="modal-content">
                 <img src="wanderer.png" alt="">
                 <p class="project-title">Wanderer</p>
-                <p>Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue
+                <p class="project-description">Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue
                     bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
                 </p>
             </div>
         </div>
         <a data-modal="modal2" id="second-card" class="project-card bounce-in">
             <div class="image-container">
-                <img src="p2pchat.png" alt="">
+                <img src="p2pchat-icon.png" alt="">
                 <p class="image-description">P2P chat</p>
             </div>
         </a>
@@ -122,14 +130,14 @@
             <div class="modal-content">
                 <img src="p2pchat.png" alt="">
                 <p class="project-title">Peer to peer chat</p>
-                <p>Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue
+                <p class="project-description">Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue
                     bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
                 </p>
             </div>
         </div>
         <a data-modal="modal3" id="third-card" class="project-card bounce-in">
             <div class="image-container">
-                <img src="boxautomat.png" alt="">
+                <img src="boxautomat-icon.png" alt="">
                 <p class="image-description">Box Automat</p>
             </div>
         </a>
@@ -137,31 +145,65 @@
             <div class="modal-content">
                 <img src="boxautomat.png" alt="">
                 <p class="project-title">Box Automat</p>
-                <p>Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue
+                <p class="project-description">Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue
                     bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
                 </p>
             </div>
         </div>
-    </section> -->
+    </section>
 
-    <!-- <p id="contact">Contact me</p>
+    <div class="subtitle">
+        <span>T</span><span>e</span><span>c</span><span>h</span>
+        <span>S</span><span>t</span><span>a</span><span>c</span><span>k</span>
+    </div>
+
+    <section class="skills">
+        <div class="marquee">
+            <div class="marquee-content">
+                <img src="java.png" alt="">
+                <img src="junit.png" alt="">
+                <img src="spring.png" alt="">
+                <img src="thymeleaf.png" alt="">
+                <img src="mysql.png" alt="">
+                <img src="javascript.png" alt="">
+                <img src="html.png" alt="">
+                <img src="css.png" alt="">
+                <img src="bootstrap.png" alt="">
+            </div>
+            <div class="marquee-content">
+                <img src="java.png" alt="">
+                <img src="junit.png" alt="">
+                <img src="spring.png" alt="">
+                <img src="thymeleaf.png" alt="">
+                <img src="mysql.png" alt="">
+                <img src="javascript.png" alt="">
+                <img src="html.png" alt="">
+                <img src="css.png" alt="">
+                <img src="bootstrap.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <div id="contact" class="subtitle">
+        <span>C</span><span>o</span><span>n</span><span>t</span><span>a</span><span>c</span><span>t</span>
+        <span>m</span><span>e</span>
+    </div>
+
     <section class="contact">
         <div class="contact-possibilities">
             <p>Via email</p>
             <p>or</p>
-            <a href="">Linkedin</a>
-            <a href="">Facebook</a>
-            <a href="">Twitter</a>
+            <a href=""><img src="linkedin.png" alt="linkedin"></a>
         </div>
         <div class="contact-by-email">
             <form action="">
                 <label>
                     <span>Your name</span>
-                    <input type="text" placeholder="Your name">
+                    <input type="text">
                 </label>
                 <label>
                     <span>Your email</span>
-                    <input type="email" placeholder="Your email">
+                    <input type="email">
                 </label>
                 <label>
                     <span>Message</span>
@@ -170,7 +212,7 @@
                 <button type="submit">Send</button>
             </form>
         </div>
-    </section> -->
+    </section>
     <script src="main.js"></script>
 </body>
 
