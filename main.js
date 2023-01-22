@@ -65,6 +65,7 @@ function closeMenu() {
 const faders = document.querySelectorAll('.fade-in-left');
 const faders2 = document.querySelectorAll('.fade-in-right')
 const bouncers = document.querySelectorAll('.bounce-in');
+const bounceText = document.querySelectorAll(".subtitle")
 
 const appearOptions = {
   threshold: 0,
@@ -94,6 +95,10 @@ bouncers.forEach(bouncer => {
   appearOnScroll.observe(bouncer);
 });
 
+bounceText.forEach(bounceText => {
+  appearOnScroll.observe(bounceText);
+})
+
 // var btn = document.querySelectorAll(".project-card");
 // var modal = document.querySelectorAll('.modal');
 
@@ -114,4 +119,18 @@ window.onclick = function(event) {
     if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
    }
   }
+}
+
+let infoCard = document.querySelectorAll(".info-card");
+
+for (let i = 0; i < infoCard.length; i++) {
+  infoCard[i].addEventListener("click", function() {
+    let infoHeader = infoCard[i].querySelector(".info-header");
+    let cardContent = infoCard[i].querySelector(".card-content")
+    let infoBody = infoCard[i].querySelector(".info-body")
+    infoCard[i].classList.toggle("opened");
+    infoHeader.classList.toggle("removed");
+    cardContent.classList.toggle("opened");
+    infoBody.classList.toggle("opened");
+});
 }
