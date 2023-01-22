@@ -73,44 +73,76 @@
 }
 
 .project-card {
+    /* position: relative; */
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     width: 30%;
     border-radius: 15px;
-    overflow: hidden;
+    /* overflow: hidden; */
     /* transform-origin: center center;
     transition: all 0.4s ease-in-out; */
     opacity: 0;
     margin-bottom: 2%;
     margin-top: 2%;
-    background-color: black;
+    background-color: darkcyan;
 }
 
 .image-container {
-    position: relative;
-
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /* margin: 0;
     padding: 0; */
+    border-radius: 15px;
+    cursor: pointer;
     aspect-ratio: 1 / 1;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .image-container:hover img {
+    animation: pop-n-move 0.4s forwards;
+    cursor: pointer;
+}
+
+@keyframes pop-n-move {
+    from {
+        transform: scale(1) translateY(0%);
+    }
+    to {
+        transform: scale(1.2) translateY(-30%);
+    }
+}
+
+/* .image-container:hover img {
     opacity: 0.3;
     cursor: pointer;
-    /* position: relative; */
-}
+    transition: all 0.2s ease-in-out;
+    position: relative;
+} */
 
 .image-container:hover p {
     cursor: pointer;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: show-title 0.4s forwards;
+}
+
+@keyframes show-title {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .image-description {
     display: none;
     position: absolute;
-    top: 50%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
@@ -118,8 +150,8 @@
 }
 
 .image-container img {
-    max-width: 100%;
-    position: absolute;
+    width: 30%;
+    /* position: absolute; */
     /* transform-origin: center; */
     /* transition: transform 0.4s ease-in-out; */
 }
@@ -183,18 +215,36 @@
     flex-direction: column;
     justify-content: center;
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 5% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
     width: 50%; /* Could be more or less, depending on screen size */
+    animation: fade-in 0.3s ease-in-out;
   }
 
   .modal-content img {
     align-self: center;
-    width: 60%;
+    width: 70%;
   }
 
+  @keyframes fade-in {
+    0% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+  }
 
+.project-title {
+    font-size: 26px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.project-description {
+    text-align: justify;
+}
 
 @keyframes bounce-in {
     0% {
@@ -212,5 +262,25 @@
     100% {
         opacity: 1;
         transform: scale(1);
+    }
+}
+
+@media (max-width: 900px) {
+
+    .project-card {
+        width: 48%;
+    }
+
+    .modal-content {
+        margin-top: 50%;
+        width: 80%; /* Could be more or less, depending on screen size */
+    }
+
+    .image-description {
+        visibility: hidden;
+    }
+
+    .project-description {
+        font-size: 1.2em;
     }
 }
