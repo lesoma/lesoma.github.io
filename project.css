@@ -273,7 +273,11 @@
 
     .modal-content {
         margin-top: 50%;
-        width: 80%; /* Could be more or less, depending on screen size */
+        width: 80%;
+    }
+
+    .modal-content img {
+        width: 100%;
     }
 
     .image-description {
