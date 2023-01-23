@@ -40,10 +40,12 @@ hamburger.addEventListener("click", mobileMenu);
 hamburger.addEventListener("click", headerTopVisibilityOff);
 
 function headerTopVisibilityOff() {
-  if (headerTop.style.visibility == "hidden") {
-    headerTop.style.visibility = "visible";
-  } else {
-    headerTop.style.visibility = "hidden";
+  if (window.innerWidth <= 900) {
+    if (headerTop.style.visibility == "hidden") {
+      headerTop.style.visibility = "visible";
+    } else {
+      headerTop.style.visibility = "hidden";
+    }
   }
 }
 

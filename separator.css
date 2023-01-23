@@ -53,7 +53,7 @@
 
 @media (max-width: 900px) {
     .separator a img:hover {
-        all: unset;
+        animation: none;
     }
 }
 
