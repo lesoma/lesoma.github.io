@@ -118,7 +118,6 @@
     .info-card.opened {
         justify-content: center;
         align-items: center;
-
     }
 
     /* @keyframes content-appear {
@@ -132,7 +131,7 @@
 
     @keyframes content-appear {
         from{
-         transform: translateY(-15%);
+         transform: translateY(-7%);
        }
         to{
           transform: translateY(0);
@@ -141,17 +140,15 @@
 
     .card-content {
         display: none;
-        margin-top: 2%;
         padding: 3%;
         text-align: justify;
     }
 
     .card-content.opened {
         display: block;
-        margin-top: 5%;
         padding: 3%;
         text-align: justify;
-        animation: content-appear 0.4s;
+        animation: content-appear 0.5s;
     }
 
     .info-body.opened {

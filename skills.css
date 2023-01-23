@@ -12,7 +12,7 @@
     justify-content: space-around;
     /* min-width: 100%; */
     gap: var(--gap);
-    animation: scroll 30s infinite linear;
+    animation: scroll 20s infinite linear;
 }
 
 .marquee-content img {
