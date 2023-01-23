@@ -112,7 +112,7 @@ button:hover {
         flex-direction: column;
     }
 
-    .contact-possibilities p, img {
+    .contact-possibilities p, .contact-possibilities img {
         margin: 5%;
     }
 
@@ -122,5 +122,9 @@ button:hover {
 
     .contact-by-email {
         border-radius: 0 0 15px 15px;
+    }
+
+    button {
+        padding: 5%;
     }
 }

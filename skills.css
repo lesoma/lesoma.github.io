@@ -15,15 +15,9 @@
     animation: scroll 20s infinite linear;
 }
 
-/* .marquee-content img {
-    height: 6rem;
-} */
-
 .marquee-content img {
-    max-height: clamp(10rem, 1rem + 28vmin, 20rem);
+    height: 6rem;
 }
-
-
 
 @keyframes scroll {
     from {
@@ -34,19 +28,9 @@
     }
 }
 
-/* @media (max-width: 900px) {
-
-    .marquee {
-        --gap: 4rem;
-        gap: var(--gap);
-    }
-
-    .marquee-content {
-        display: flex;
-        justify-content: space-around;
-    }
+@media (max-width: 900px) {
     
     .marquee-content img {
-        height: 3rem;
+        height: 4rem;
     }
-} */
+}
