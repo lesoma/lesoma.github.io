@@ -182,4 +182,8 @@
     .project-description {
         font-size: 1.2em;
     }
+
+    .image-container:hover img {
+        animation: none;
+    }
 }

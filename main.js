@@ -40,7 +40,7 @@ hamburger.addEventListener("click", mobileMenu);
 hamburger.addEventListener("click", headerTopVisibilityOff);
 
 function headerTopVisibilityOff() {
-  if (window.innerWidth <= 900) {
+  if (window.innerWidth <= 1024) {
     if (headerTop.style.visibility == "hidden") {
       headerTop.style.visibility = "visible";
     } else {
