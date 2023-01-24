@@ -6,7 +6,7 @@
 }
 
 .separator a img {
-    animation: bouncing 5s infinite ease-in-out;
+    animation: bouncing 6s infinite ease-in-out;
 }
 
 .separator a img:hover {
@@ -55,9 +55,13 @@
     .separator a img:hover {
         animation: none;
     }
+
+    .separator {
+        margin: 20% 0 20% 0;
+    }
 }
 
-@media (max-width: 375px) {
+/* @media (max-width: 375px) {
     .separator {
         margin: 10% 0 10% 0;
     }
@@ -67,4 +71,4 @@
     .separator {
         margin: 20% 0 20% 0;
     }
-}
+} */

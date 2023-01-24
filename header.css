@@ -8,7 +8,7 @@
 }
 
 .flex-item-left p {
-    font-size: 20px;
+    font-size: 1.3em;
 }
 
 #name {
@@ -27,7 +27,7 @@
 }
 
 #greeting, #name {
-    font-size: 6vh;
+    font-size: 3.2em;
 }
 
 @keyframes fade-in-up {
@@ -76,12 +76,46 @@
         margin-top: 10%;
     }
 
-    #greeting, #name {
-        font-size: 4vh;
-    }
-
     #position {
-        font-size: 2vh;
         margin-bottom: 10%;
     }
 }
+
+@media (max-width: 550px) {
+    #greeting, #name {
+        font-size: 2.8em;
+    }
+}
+
+@media (max-width: 500px) {
+    #greeting, #name {
+        font-size: 2.6em;
+    }
+}
+
+@media (max-width: 450px) {
+    #greeting, #name {
+        font-size: 2.3em;
+    }
+}
+
+@media (max-width: 400px) {
+    #greeting, #name {
+        font-size: 2.0em;
+    }
+
+    .flex-item-left p {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 350px) {
+    #greeting, #name {
+        font-size: 1.8em;
+    }
+
+    .flex-item-left p {
+        font-size: 1.1em;
+    }
+}
+
