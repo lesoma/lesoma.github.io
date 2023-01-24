@@ -1,70 +1,3 @@
-/* .projects {
-    display: flex;
-    flex-direction: row;
-}
-
-.project p {
-    display: block;
-}
-
-.selection-buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    background-color: #333;
-    width: 30%;
-}
-
-.selection-buttons a {
-    color: white;
-    background-color: #04AA6D;
-    width: 80%;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    margin-top: 10%;
-    margin-bottom: 10%;
-    align-self: center;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 10px;
-}
-
-.selected-project {
-    display: flex;
-    flex-direction: row;
-    width: 70%;
-}
-
-.project-picture {
-    display: flex;
-    width: 50%;
-}
-
-.project-picture img {
-    width: 100%;
-}
-
-.project-description {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    padding: 5%;
-    background-color: wheat;
-}
-
-.project-description p {
-    margin-bottom: 10%;
-}
-
-
-.project-description img {
-    width: 20%;
-} */
-
-/*Projects cards CSS*/
 .projects {
     display: flex;
     flex-direction: row;
@@ -73,15 +6,11 @@
 }
 
 .project-card {
-    /* position: relative; */
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     width: 30%;
     border-radius: 15px;
-    /* overflow: hidden; */
-    /* transform-origin: center center;
-    transition: all 0.4s ease-in-out; */
     opacity: 0;
     margin-bottom: 2%;
     margin-top: 2%;
@@ -89,16 +18,12 @@
 }
 
 .image-container {
-    /* position: relative; */
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin: 0;
-    padding: 0; */
     border-radius: 15px;
     cursor: pointer;
     aspect-ratio: 1 / 1;
-    /* overflow: hidden; */
 }
 
 .image-container:hover img {
@@ -114,13 +39,6 @@
         transform: scale(1.2) translateY(-30%);
     }
 }
-
-/* .image-container:hover img {
-    opacity: 0.3;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    position: relative;
-} */
 
 .image-container:hover p {
     cursor: pointer;
@@ -151,35 +69,14 @@
 
 .image-container img {
     width: 30%;
-    /* position: absolute; */
-    /* transform-origin: center; */
-    /* transition: transform 0.4s ease-in-out; */
 }
-
-/* .project-card:hover .image-container img, .project-card:focus .image-container img {
-    transform: scale(1.1);
-}
-
-.project-card:hover #card-title, .project-card:focus #card-title {
-    color: greenyellow;
-}
-
-.project-card:hover, .project-card:focus {
-    position: relative;
-    transform: translateY(-15px);
-    background-color: #ccc;
-    transition: all 0.5s ease;
-    cursor: pointer;
-} */
 
 .card-body {
     padding: 24px;
 }
   
 #card-title {
-    /* transition: color 0.4s ease-in-out; */
     margin: 0 0 18px 0;
-    /* transition: color 0.3s ease-out; */
 }
 
 .bounce-in.animation {
@@ -196,47 +93,44 @@
 }
 
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
+    width: 100%;
     height: 100%;
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
   }
 
-  /* Modal Content/Box */
-  .modal-content {
+.modal-content {
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: #fefefe;
-    margin: 5% auto; /* 15% from the top and centered */
+    margin: 5% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 50%; /* Could be more or less, depending on screen size */
-    /* max-height: 80vh;
-    overflow-y: auto; */
+    width: 50%;
     animation: fade-in 0.3s ease-in-out;
-  }
+}
 
-  .modal-content img {
+.modal-content img {
     align-self: center;
     width: 60%;
-  }
+}
 
-  @keyframes fade-in {
+@keyframes fade-in {
     0% {
         transform: scale(0.5);
     }
     100% {
         transform: scale(1);
     }
-  }
+}
 
 .project-title {
     font-size: 26px;
@@ -268,7 +162,6 @@
 }
 
 @media (max-width: 900px) {
-
     .project-card {
         width: 48%;
     }
