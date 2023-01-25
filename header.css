@@ -96,14 +96,14 @@
 @media (max-width: 450px) {
     #greeting, #name {
         font-size: 2.3em;
-        font-size: 2.0em;
+        font-size: 1.6em;
     }
 }
 
 @media (max-width: 400px) {
     #greeting, #name {
         font-size: 2.0em;
-        font-size: 2.0em;
+        font-size: 1.4em;
     }
 
     .flex-item-left p {
@@ -114,7 +114,7 @@
 @media (max-width: 350px) {
     #greeting, #name {
         font-size: 1.8em;
-        font-size: 1.8em;
+        font-size: 1.2em;
     }
 
     .flex-item-left p {
