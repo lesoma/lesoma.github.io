@@ -67,7 +67,8 @@ function closeMenu() {
 const faders = document.querySelectorAll('.fade-in-left');
 const faders2 = document.querySelectorAll('.fade-in-right')
 const bouncers = document.querySelectorAll('.bounce-in');
-const bounceText = document.querySelectorAll(".subtitle")
+const bounceText = document.querySelectorAll(".subtitle");
+const firstProjectCard = document.querySelector("#first-card")
 
 const appearOptions = {
   threshold: 0,
@@ -100,9 +101,6 @@ bouncers.forEach(bouncer => {
 bounceText.forEach(bounceText => {
   appearOnScroll.observe(bounceText);
 })
-
-// var btn = document.querySelectorAll(".project-card");
-// var modal = document.querySelectorAll('.modal');
 
 // bouncing functions
 var btn = document.querySelectorAll(".project-card");
