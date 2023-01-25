@@ -75,7 +75,6 @@
 
     #home {
         display: block;
-        -webkit-tap-highlight-color: transparent;
     }
 
     .hamburger {

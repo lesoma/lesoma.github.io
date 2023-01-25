@@ -40,6 +40,10 @@ body {
     padding-bottom: 50px;
 }
 
+input, textarea, button, select, a {
+    -webkit-tap-highlight-color: transparent;
+}
+
 .subtitle {
     font-size: 30px;
     padding-top: 5%;
