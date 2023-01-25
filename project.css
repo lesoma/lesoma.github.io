@@ -162,9 +162,9 @@
 }
 
 @media (max-width: 900px) {
-    /* .project-card {
+    .project-card {
         width: 48%;
-    } */
+    }
 
     .modal-content {
         margin-top: 20%;

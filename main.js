@@ -68,7 +68,6 @@ const faders = document.querySelectorAll('.fade-in-left');
 const faders2 = document.querySelectorAll('.fade-in-right')
 const bouncers = document.querySelectorAll('.bounce-in');
 const bounceText = document.querySelectorAll(".subtitle");
-const firstProjectCard = document.querySelector("#first-card")
 
 const appearOptions = {
   threshold: 0,
