@@ -123,7 +123,7 @@
 
     @keyframes transform-down {
         0% {
-           transform: transLateY(-20px)
+           transform: transLateY(-30px)
        }
        100% {
            transform: transLateY(0px)
