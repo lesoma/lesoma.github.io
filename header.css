@@ -28,6 +28,7 @@
 
 #greeting, #name {
     font-size: 3.2em;
+    font-size: 3vw;
 }
 
 @keyframes fade-in-up {
@@ -60,6 +61,18 @@
 }
 
 @media (max-width: 1024px) {
+    #greeting, #name {
+        /* font-size: 2.0em;
+        font-size: 1.4em;
+        font-size: 1.8vw; */
+        font-size: 7vw;
+    }
+
+    .flex-item-left p {
+        /* font-size: 1.2em; */
+        font-size: 3vw;
+    }
+
     .header-container {
         flex-direction: column;
     }
@@ -83,41 +96,50 @@
 
 @media (max-width: 550px) {
     #greeting, #name {
-        font-size: 2.8em;
+        /* font-size: 2.8em; */
+        font-size: 7vw;
     }
 }
 
 @media (max-width: 500px) {
     #greeting, #name {
-        font-size: 2.6em;
+        /* font-size: 2.6em; */
+        font-size: 7.5vw;
     }
 }
 
 @media (max-width: 450px) {
     #greeting, #name {
-        font-size: 2.3em;
+        /* font-size: 2.3em;
         font-size: 1.6em;
+        font-size: 2vw; */
+        font-size: 8vw;
     }
 }
 
 @media (max-width: 400px) {
     #greeting, #name {
-        font-size: 2.0em;
+        /* font-size: 2.0em;
         font-size: 1.4em;
+        font-size: 1.8vw; */
+        font-size: 8.5vw;
     }
 
     .flex-item-left p {
-        font-size: 1.2em;
+        /* font-size: 1.2em; */
+        font-size: 5vw;
     }
 }
 
 @media (max-width: 350px) {
     #greeting, #name {
-        font-size: 1.8em;
+        /* font-size: 1.8em;
         font-size: 1.2em;
+        font-size: 1.6vw; */
+        font-size: 6vw;
     }
 
     .flex-item-left p {
-        font-size: 1.1em;
+        /* font-size: 1.1em; */
     }
 }
