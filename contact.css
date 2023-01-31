@@ -159,6 +159,12 @@ button:hover {
     }
 }
 
+@media (max-width: 500px) {
+    button {
+        width: 84%;
+    }
+}
+
 @media (max-width: 400px) {
     input, textarea {
         font-size: 1.1em;
