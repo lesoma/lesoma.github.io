@@ -30,26 +30,21 @@ ol, ul {
 
 html {
     height: 100%;
-    padding-left: 10%;
-    padding-right: 10%;
+    max-width: 100%;
     scroll-behavior: smooth;
     overflow-x: hidden;
-    max-width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 body {
-    /* height: 100%; */
-    padding-bottom: 50px;
-    overflow-x: hidden;
     max-width: 100%;
-}
-
-input, textarea, button, select, a {
-    -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
+    padding-bottom: 50px;
 }
 
 .subtitle {
-    font-size: 30px;
+    font-size: 2em;
     padding-top: 5%;
     padding-bottom: 3%;
 }
@@ -104,5 +99,11 @@ input, textarea, button, select, a {
     }
     100%{
         transform: translateY(0em);
+    }
+}
+
+@media (max-width: 550px) {
+    .subtitle {
+        font-size: 1.7em;
     }
 }

@@ -4,7 +4,6 @@ Introduction:
     make me feel successful. I always keep my eye on recent consumer technologies, whether it is connected to phones, vehicles or any useful gadgets.
     It is amazing to see how they affect our everyday lives.
 
-
 Education:
     I graduated in 2021 from Budapest Business School as an economist. However I was always interested in software developement,
     so I decided to give it a go with a basic frontend course. I really liked it, and I got a great opportunity to learn Java backend
@@ -18,5 +17,22 @@ Hobbies:
     and last but not least it is a suberb social activity.
 
 Wanderer:
+    My first visualized project, where I used Java awt and swing for displaying content on canvas. In this project, the focus was on to use the
+    4 Object-Oriented Programming principles. The game logic is pretty simple. We can walk throught a maze with our hero character, where we can
+    fight with randomly placed monsters and also with the archenemy. The characters' statistics are randomly generated as well, and during the
+    gameplay they are continuously changing based on the outcomes of the fights. If we are lucky, our hero gets strong enough - after fighting with
+    several monsters - to defeat the archenemy.
+
 P2P chat:
+    This application is made in Spring and uses Model-View-Controller pattern. It communicates with a MySQL database, where the messages are saved.
+    The main focus was on to implement SOLID principles correctly. The app can be parameterized so we can set the messages' destination. All of my
+    teammates make the app by the same specifications, so it can handle the transferred messages easily. After deploying the chat app on AWS, we 
+    started texting each other. It is peer to peer, so everyone has to set a different destination. When the app receives a message, it saves the 
+    required informations to the database, displays them in order and forwards to the next application in the chain.
+
 Box Automat:
+    This application also made in Spring with a MySQL database. It is a REST API project, which simulates a box-automat delivery service. It can
+    handle user registrations, package orders and deliveries, courier actions. A user can order a product by this service, and got a unique package
+    id. The package itself has this id, has an expiration date (which defines the date until the package can be collected from the machine) and a size.
+    The application updates the package's availability on different courier and user actions. I made a guide, which describes how to use the program
+    and I also Dockerize it, to try it with easy.

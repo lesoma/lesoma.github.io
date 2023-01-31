@@ -129,11 +129,13 @@
            transform: transLateY(0px)
        }
    }
+
     .link-container a {
         justify-self: flex-start;
         margin: 6% 0 6% 0;
         width: 100%;
     }
+    
     .link-container a::before, .link-container a:hover , .link-container a:hover::before {
         background-color: transparent;
         transform: none;
