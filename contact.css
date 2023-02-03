@@ -119,6 +119,18 @@ button {
     font-size: 1.3em;
     border-radius: 15px;
     background-color: darkcyan;
+    animation: button-animation-back 0.4s forwards;
+}
+
+@keyframes button-animation-back {
+    from {
+        background-color: rgb(0, 116, 116);
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    to {
+        background-color: darkcyan;
+    }
 }
 
 button:hover {
@@ -128,7 +140,7 @@ button:hover {
 
 @keyframes button-animation {
     from {
-        background-color: rgb(0, 116, 116);
+        background-color: darkcyan;
     }
     to {
         padding-left: 5%;
