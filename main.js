@@ -1,135 +1,146 @@
 window.onload = function() {
-  setTimeout(() => {
-    typeWriter();
-  }, 1000);
-};
-
-// typewriter function
-function typeWriter() {
-  var p = document.getElementById('name');
-  p.innerHTML = 'I';
-  p.style.color = "black";
-  var n = 0;
-  var str = 'I\'m Soma Leisztner.';
-  var typeTimer = setInterval(function() {
-    n = n + 1;
-    p.innerHTML = str.slice(0, n);
-    if (n === str.length) {
-      clearInterval(typeTimer);
-      p.innerHTML = str;
-      n = 0;
-      setInterval(function() {
-        if (n === 0) {
-          p.innerHTML = str + "_"
-          n = 1;
-        } else {
-          p.innerHTML = str
-          n = 0;
-        };
-      }, 500);
-    };
-  }, 60)
+    setTimeout(() => {
+      typeWriter();
+    }, 1000);
 }
 
-// navbar functions
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".navbar");
-const headerTop = document.querySelector(".header-container .flex-item-left");
+window.addEventListener("click", hamburgerAction);
+window.addEventListener("click", navLinkAction);
+window.addEventListener("scroll", animationAdder);
+window.addEventListener("load", aboutMeAction);
+window.addEventListener("load", projectAction);
+  
+function typeWriter() {
+    let p = document.getElementById('name');
+    p.innerHTML = 'I';
+    p.style.color = "black";
+    let n = 0;
+    let str = 'I\'m Soma Leisztner.';
+    const typeTimer = setInterval(function() {
+        n = n + 1;
+        p.innerHTML = str.slice(0, n);
+        if (n === str.length) {
+            clearInterval(typeTimer);
+            p.innerHTML = str;
+            n = 0;
+            setInterval(function() {
+                if (n === 0) {
+                p.innerHTML = str + "_";
+                n = 1;
+                } else {
+                    p.innerHTML = str;
+                    n = 0;
+                };
+            }, 500);
+        };
+    }, 60);
+}
 
-hamburger.addEventListener("click", mobileMenu);
-hamburger.addEventListener("click", headerTopVisibilityOff);
-
-function headerTopVisibilityOff() {
-  if (window.innerWidth <= 1024) {
-    if (headerTop.style.visibility == "hidden") {
-      headerTop.style.visibility = "visible";
-    } else {
-      headerTop.style.visibility = "hidden";
-    }
-  }
+function hamburgerAction() {
+    const hamburger = document.querySelector(".hamburger");
+    hamburger.addEventListener("click", mobileMenu);
+    hamburger.addEventListener("click", headerTopVisibility);
 }
 
 function mobileMenu() {
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("responsive");
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".navbar");
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("responsive");
 }
 
-const navLink = document.querySelectorAll(".link-container a");
-navLink.forEach(n => n.addEventListener("click", closeMenu));
-navLink.forEach(n => n.addEventListener("click", headerTopVisibilityOff));
+function headerTopVisibility() {
+    const headerTop = document.querySelector(".header-container .flex-item-left");
+    if (window.innerWidth <= 1024) {
+        if (headerTop.style.visibility == "hidden") {
+            headerTop.style.visibility = "visible";
+        } else {
+            headerTop.style.visibility = "hidden";
+        }
+    }
+}
+
+function navLinkAction() {
+    const navLink = document.querySelectorAll(".link-container a");
+    navLink.forEach(n => n.addEventListener("click", closeMenu));
+    navLink.forEach(n => n.addEventListener("click", headerTopVisibility));
+}
 
 function closeMenu() {
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".navbar");
     hamburger.classList.remove("active");
     navMenu.classList.remove("responsive");
 }
 
-// fading functions
-const faders = document.querySelectorAll('.fade-in-left');
-const faders2 = document.querySelectorAll('.fade-in-right')
-const bouncers = document.querySelectorAll('.bounce-in');
-const bounceText = document.querySelectorAll(".subtitle");
+function animationAdder() {
+    const aboutMeLeft = document.querySelectorAll('.fade-in-left');
+    const aboutMeRight = document.querySelectorAll('.fade-in-right');
+    const projects = document.querySelectorAll('.bounce-in');
+    const subtitles = document.querySelectorAll(".subtitle");
 
-const appearOptions = {
-  threshold: 0,
-  rootMargin: "0px 0px -200px 0px"
-};
-
-const appearOnScroll = new IntersectionObserver(function(entries,appearOnScroll) {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) {
-      return
-    } else {
-      entry.target.classList.add('animation');
-      appearOnScroll.unobserve(entry.target);
+    const appearOptions = {
+        threshold: 0,
+        rootMargin: "0px 0px -200px 0px"
     }
-  });
-}, appearOptions);
 
-faders.forEach(fader => {
-  appearOnScroll.observe(fader);
-});
+    const appearOnScroll = new IntersectionObserver(function(entries,appearOnScroll) {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) {
+            return;
+          } else {
+            entry.target.classList.add('animation');
+            appearOnScroll.unobserve(entry.target);
+          }
+        });
+    }, appearOptions);
 
-faders2.forEach(fader => {
-  appearOnScroll.observe(fader);
-});
-
-bouncers.forEach(bouncer => {
-  appearOnScroll.observe(bouncer);
-});
-
-bounceText.forEach(bounceText => {
-  appearOnScroll.observe(bounceText);
-})
-
-// bouncing functions
-var btn = document.querySelectorAll(".project-card");
-
-for (var i = 0; i < btn.length; i++) {
-  btn[i].addEventListener("click", function() {
-    var modal = document.getElementById(this.dataset.modal);
-    modal.style.display = "block";
-}, false);
-}
-var modals = document.querySelectorAll('.modal');
-
-window.onclick = function(event) {
-  if (event.target.classList.contains('modal')) {
-   for (var index in modals) {
-    if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
-   }
-  }
+    aboutMeLeft.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+      
+    aboutMeRight.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+      
+    projects.forEach(bouncer => {
+        appearOnScroll.observe(bouncer);
+    });
+      
+    subtitles.forEach(bouncer => {
+        appearOnScroll.observe(bouncer);
+    });
 }
 
-let infoCard = document.querySelectorAll(".info-card");
+function aboutMeAction() {
+    let infoCard = document.querySelectorAll(".info-card");
+    for (let i = 0; i < infoCard.length; i++) {
+        infoCard[i].addEventListener("click", function() {
+            let infoHeader = infoCard[i].querySelector(".info-header");
+            let cardContent = infoCard[i].querySelector(".card-content");
+            let infoBody = infoCard[i].querySelector(".info-body");
+            infoCard[i].classList.toggle("opened");
+            infoHeader.classList.toggle("removed");
+            cardContent.classList.toggle("opened");
+            infoBody.classList.toggle("opened");
+        });
+    }
+}
 
-for (let i = 0; i < infoCard.length; i++) {
-  infoCard[i].addEventListener("click", function() {
-    let infoHeader = infoCard[i].querySelector(".info-header");
-    let cardContent = infoCard[i].querySelector(".card-content")
-    let infoBody = infoCard[i].querySelector(".info-body")
-    infoCard[i].classList.toggle("opened");
-    infoHeader.classList.toggle("removed");
-    cardContent.classList.toggle("opened");
-    infoBody.classList.toggle("opened");
-});
+function projectAction() {
+    const projectCard = document.querySelectorAll(".project-card");
+    for (let i = 0; i < projectCard.length; i++) {
+        projectCard[i].addEventListener("click", function() {
+            let modal = document.getElementById(this.dataset.modal);
+            modal.style.display = "block";
+        }, false);
+    }
+    const modals = document.querySelectorAll('.modal');
+    window.onclick = function(event) {
+        if (event.target.classList.contains('modal')) {
+            for (let i = 0; i < modals.length; i++) {
+                if (typeof modals[i].style !== 'undefined') modals[i].style.display = "none";    
+            }
+        }
+    }
 }
